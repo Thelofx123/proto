@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9879abd536.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./loginAndSignup.css">
+</head>
+<body>
+    <div class="horLine"></div>
+    <div class="verLine"></div>
+    <div class="mainContainer perfectCenter">
+        <div class="demoName spaceBetween">
+            <div class="demoLogo">
+                <img src="https://images.pexels.com/photos/12125084/pexels-photo-12125084.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+            </div>
+            <h2>Crushly</h2>
+        </div>
+        <!-- ==================== Login ========================= -->
+        <div class="loginForm perfectCenter loginFormActive">
+            <div class="docHead spaceBetween">
+                <i class="fa-solid fa-face-grin-hearts loginSmileBtn"></i>
+                <i class="fa-solid fa-heart loginCloseBtn perfectCenter"></i>
+            </div>
+            <div class="formBox">
+                <div>
+                    <div>
+                        <span class="title">Login</span>
+                        <form>
+                            <div class="inputField">
+                                <input type="email" id="loginEmail" placeholder="Enter your email" required autocomplete="off">
+                                <i class="fa-solid fa-envelope icon"></i>
+                            </div>
+                            <div class="inputField">
+                                <input type="password" id="loginPassword" class="password" placeholder="Enter your password" required>
+                                <i class="fa-solid fa-lock icon"></i>
+                                <i class="fa-solid fa-eye-slash showHidePw"></i>
+                            </div>
+                            <div class="checkboxText">
+                                <div class="checkboxContent">
+                                    <input type="checkbox" id="logCheck">
+                                    <label for="logCheck" class="text">Save me</label>
+                                </div>
+                                <a href="#" class="text">Forgot your password?</a>
+                            </div>
+                            <div class="inputField button">
+                                <input id="loginButton" type="button" value="Login">
+                            </div>
+                        </form>
+                        <div class="loginSingUp">
+                            <span class="text">Don't have an account?
+                                <a href="#" class="text signupText">Sign up now</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ==================== Login End ===================== -->
+<!-- ==================== Sign up ======================= -->
+        <div class="signUpForm perfectCenter ">
+            <div class="docHead spaceBetween">
+                <i class="fa-solid fa-face-grin-hearts signUpSmileBtn"></i>
+                <i class="fa-solid fa-heart signUpCloseBtn perfectCenter"></i>
+            </div>
+            <div class="formBox">
+                <div>
+                    <div>
+                        <span class="title">Sign up</span>
+                        <form id="form">
+                            <div class="inputFields">
+                                <input type="text" id="nameInput" placeholder="Enter your name" required autocomplete="off">
+                                <i class="fa-solid fa-circle-user icon"></i>
+                                <i class="fa-solid fa-circle-check check"></i>
+                                <i class="fa-solid fa-circle-exclamation check"></i>
+                                <small></small>
+                            </div>
+                            <div class="inputFields">
+                                <input type="email" id="emailInput" placeholder="Enter your email" required autocomplete="off">
+                                <i class="fa-solid fa-envelope icon"></i>
+                                <i class="fa-solid fa-circle-check check"></i>
+                                <i class="fa-solid fa-circle-exclamation check"></i>
+                                <small></small>
+                            </div>
+                            <div class="inputFields">
+                                <input type="password" id="passwordInput" placeholder="Enter your password" required>
+                                <i class="fa-solid fa-lock icon"></i>
+                                <i class="fa-solid fa-circle-check check"></i>
+                                <i class="fa-solid fa-circle-exclamation check"></i>
+                                <small></small>
+                            </div>
+                            <div class="inputFields">
+                                <input type="password" class="password2" id="passwordUp" placeholder="Confirm your password" required>
+                                <i class="fa-solid fa-check-double icon"></i>
+                                <i class="fa-solid fa-circle-check check"></i>
+                                <i class="fa-solid fa-circle-exclamation check"></i>
+                                <small></small>
+                            </div>
+                            <div class="showPass">
+                                <input type="checkbox" id="showPassword">
+                                <label for="showPassword" class="text">Show password</label>
+                            </div>
+                            <input id="signUpButton" type="button" onclick="formFunction()" value="Sign up">
+                        </form>
+                        <div class="loginSingUp">
+                            <span class="text">Already have an account?
+                                <a href="#" class="text loginText">Login now</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- ==================== Sign up End =================== -->
+        </div>
+    </div>
+    <script src="./loginAndSignup.js"></script>
+    <script type="module" src="./loginDatabase.js"></script>
+</body>
+</html>

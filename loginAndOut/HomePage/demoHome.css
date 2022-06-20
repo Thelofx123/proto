@@ -1,0 +1,1051 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+:root{
+    --neonPink: #42add5;
+    --lightPink: #ff8fab;
+    --primaryPink: #e460a7;
+    --background1: #BBEFF5;
+    --background2: #F0A4F3;
+    --midnightBlue: #0c023e;
+    --neonLightPink: #e92efb;
+    --borderColorPink: #578AD0;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(#ff8fab, #fff);
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.perfectCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spaceBetween{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.centerPosition{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* =============================================================== */
+    /* Big Container */
+/* =============================================================== */
+.bigContainer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1500px;
+    position: relative;
+}
+.header{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border-bottom: 2px solid #fff;
+    background: rgba(0, 0, 0, 0.1);
+}
+.headerLeft{
+    width: 100%;
+    max-width: 330px;
+    position: relative;
+}
+.headerLeft .demoLogo,
+.headerRight .headerUserAvatar{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.searchBox{
+    width: 80%;
+    height: 40px;
+    max-width: 280px;
+    overflow: hidden;
+    position: relative;
+    padding-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+.searchInput{
+    border: none;
+    height: 100%;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    overflow: hidden;
+    background: transparent;
+    width: calc(100% - 40px);
+}
+.searchInput::placeholder{
+    color: #fff;
+    font-size: 15px;
+}
+.searchButton{
+    width: 40px;
+    border: none;
+    height: 40px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    background: transparent;
+}
+.searchButton:hover{
+    color: #000;
+    transition: 0.3s ease;
+    background: lightgray;
+}
+.headerMiddle span{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    font-family: 'Lobster', cursive;
+}
+.headerRight .userName{
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+/* =============================================================== */
+    /* Middle Head Section */
+/* =============================================================== */
+.middleHead{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+.fa-bars,
+.fa-xmark,
+.chatOpenBtn,
+.fa-arrow-left,
+.secretChatOpenBtn{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    backdrop-filter: blur(0.5px);
+    box-shadow: 0 0 0 10px #dda4f1, 0 0 0 12px #578AD0, 0 0 0 8px #578AD0;
+}
+.fa-bars:hover,
+.fa-xmark:hover,
+.chatOpenBtn:hover,
+.fa-arrow-left:hover,
+.secretChatOpenBtn:hover{
+    box-shadow: 0 5px 30px 0 rgba(31, 38, 135, 0.37);
+}
+.fa-arrow-left{
+    display: none;
+}
+.chatOpenBtn,
+.secretChatOpenBtn{
+    margin-left: 50px;
+}
+/* =============================================================== */
+    /* Menu Section */
+/* =============================================================== */
+.menu_bar {
+    position: absolute;
+    top: 130px;
+    left: 20px;
+    z-index: 100;
+}
+.dropDown {
+    position: absolute;
+    left: -300px;
+    width: 240px;
+    overflow: hidden;
+    visibility: hidden;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px 0 rgba(31, 38, 135, 0.37);
+}
+.dropDownActive{
+    left: 0;
+    visibility: visible;
+    transition: 0.3s ease;
+}
+.dropDown h4{
+    padding: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+.dropDown h4::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+}
+.dropDown h4:hover::after{
+    transition: 0.3s ease;
+    background: var(--lightPink);
+}
+.dropDown h4:not(:last-child){
+    margin-bottom: 5px;
+}
+.dropDown h4 i{
+    margin-right: 10px;
+}
+.dropDown h4:hover{
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.6);
+}
+.dropDown h4:hover i{
+    transition: 0.3s ease;
+    transform: scale(1.3);
+}
+.addressCard{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.uniqueID{
+    margin-left: 10px;
+}
+#signOutBtn button{
+    border: none;
+    font-size: 18px;
+    background: transparent;
+}
+.dropDown_editPro {
+    width: 240px;
+    height: 403px;
+    overflow: hidden;
+    position: relative;
+    visibility: hidden;
+    border-radius: 15px;
+    backdrop-filter: blur(100px);
+}
+.dropDown_editProActive{
+    visibility: visible;
+}
+.save_change {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+.save_change:hover{
+    background: lightgray;
+    transition: all 0.3s ease;
+}
+.profile_change {
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+.about {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+}
+.about input {
+    width: 70%;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    margin-left: 10px;
+}
+.avatarChange{
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.avatar_change {
+    width: 100%;
+    display: flex;
+    margin-top: 5px;
+    flex-direction: column;
+}
+.avatar_container {
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+    margin-top: 10px;
+}
+.avatar_zurag {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.avatar_zurag:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+}
+/* =============================================================== */
+    /* CrushList Section */
+/* =============================================================== */
+.crushList{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.2);
+}
+.crushListActive{
+    visibility: visible;
+}
+.crushBox{
+    display: flex;
+    padding: 10px;
+    visibility: hidden;
+    background: #fff;
+    align-items: center;
+    border-radius: 15px;
+    transform: scale(0.8);
+    flex-direction: column;
+    justify-content: center;
+}
+.crushBoxActive{
+    transform: scale(1);
+    visibility: visible;
+    transition: 0.3s ease;
+}
+.bioBox{
+    width: 300px;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px 15px;
+    text-align: center;
+}
+.crushBox .crushName{
+    margin-top: 5px;
+    font-size: 19px;
+}
+.crushAvatar{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.crushListRemoveBtn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    color: lightgray;
+}
+.crushListRemoveBtn:hover{
+    color: red;
+}
+.cover_change {
+    width: 100%;
+    height: 140px;
+    position: relative;
+    background-color: azure;
+}
+/* =============================================================== */
+    /* Help Section */
+/* =============================================================== */
+.helpContainer {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.2);
+}
+.helpContainerActive{
+    visibility: visible;
+}
+.helpContainer .fa-minus{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.heart {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 100;
+    cursor: pointer;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+.heart > img {
+	width: 50px;
+	animation: beat 2s ease-in-out infinite;
+}
+.message {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 0;
+	z-index: 0;
+    min-width: 500px;
+	overflow: hidden;
+	border-radius: 5px;
+	transform: translate(-50%, -50%);
+    height: 0px;
+	padding: 0px 20px;
+	box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
+	background: url("https://i.pinimg.com/474x/fe/54/f6/fe54f671f05663327c0a4f915b481f15.jpg") no-repeat center/cover;
+}
+.messageActive{
+    height: 400px;
+    height: 30%;
+	padding: 20px 20px;
+    transition: 2s ease;
+}
+@keyframes beat {
+	0% {
+		width: 50px;
+	}
+	25% {
+		width: 58px;
+	}
+	30% {
+		width: 50px;
+	}
+	50% {
+		width: 45px;
+	}  
+	60% {
+		width: 50px;
+	}
+	75% {
+		width: 58px;
+	}
+	100% {
+		width: 50px;
+	}
+}
+.heartmove{
+    transition: 2s ease;
+    top: 65%;
+	transform: translate(-50%, -50%);
+}
+/* =============================================================== */
+    /* Theme Section */
+/* =============================================================== */
+.themeContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.2);
+}
+.themeContainerActive{
+    visibility: visible;
+}
+.themeContainer > div{
+    position: relative;
+}
+.themeContainer .fa-minus{
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: lightgray;
+}
+.themeContainer .fa-minus:hover{
+    background: #fff;
+}
+.themeBox{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 300px;
+    height: 200px;
+    background: #fff;
+    transform: scale(0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.themeBoxActive{
+    transition: 0.3s ease;
+    transform: scale(1);
+}
+.themeType{
+    height: 100%;
+    width: 100%;
+}
+.themeType:nth-child(1){
+    background: linear-gradient(red, green);
+    border-radius: 15px 0 0 15px;
+}
+.themeType:nth-child(2){
+    background: linear-gradient(yellow, blue);
+    border-radius: 0 15px 15px 0;
+}
+.themeType:hover{
+    transition: 0.2s ease;
+    border: 2px solid #fff;
+}
+/* ================== Middle Container Section ================== */
+    /* Middle Container Section */
+/* ================== Middle Container Section ================== */
+.middleContainer{
+    width: 100%;
+    padding: 10px;
+    min-height: calc(100vh - 140px);
+}
+.heartSection  div{
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+    position: relative;
+    display: inline-block;
+    transform: rotate(-45deg);
+    background-color: #ff6961;
+    animation: xAni 10s linear infinite;
+}
+.heartSection div::before,
+.heartSection div::after{
+    content: "";
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ff6961;
+}
+.heartSection div:before {
+    left: 0;
+    top: -35px;
+}
+.heartSection div:after {
+    top: 0;
+    left: 35px;
+}
+.biosCon{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 80%;
+    height: 40px;
+    transform: translateX(-50%);
+}
+.biosUnderline{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 80%;
+    height: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, transparent 0%, var(--lightPink) 20%, var(--lightPink) 80%, transparent 100%);
+}
+/* ======================== Star Section ======================== */
+.starSection{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.starIn{
+    position: absolute;
+    animation: star 5s ease-in-out infinite;
+}
+.star{
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 10px 5px rgba(255,255,255, 0.8),
+    0 0 15px 8px rgba(255,255,255, 0.8),
+    0 0 20px 11px rgba(255,255,255, 0.8);
+    
+}
+.star::before,
+.star::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.star::before{
+    height: 2px;
+    width: 60px;
+    background-image:linear-gradient(to left, transparent, white, transparent);
+}
+.star::after{
+    height: 60px;
+    width: 2px;
+    background-image:linear-gradient(to bottom, transparent, white, transparent);
+}
+@keyframes star{
+    0%{
+        transform: scale(0.1) rotate(-200deg);
+    }
+    55%{
+        transform: scale(1.2) rotate(180deg);
+    }
+    100%{
+        transform: scale(0.1) rotate(-200deg);
+    }
+}
+/* ===================== Search User Section ===================== */
+.searchUserContainer{
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    max-width: 200px;
+    width: 100%;
+    z-index: 10;
+    padding: 5px 0 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    background: #e7e6dd;
+    visibility: hidden;
+}
+.searchUserContainerActive{
+    visibility: visible;
+}
+.userSearchBox{
+    padding: 5px 10px;
+    display: none;
+    border-bottom: 2px solid #fff;
+}
+.userSearchBoxActive{
+    display: flex;
+}
+.searchUserContainer span{
+    margin: 0 0 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.searchUserContainer span:hover{
+    color: red;
+}
+.userSearchBox button{
+    border-radius: 20px;
+    border: none;
+    padding: 5px 10px;
+    background: #fff;
+    cursor: pointer;
+}
+.userSearchBox button:hover{
+    background: rgba(255,255,255, 0.8);
+}
+.userSearchImg{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+    border: 2px sold lightgray;
+}
+.userSearchDetail h3{
+    font-size: 14px;
+    font-weight: 500;
+}
+/* ===================== Secret chat Section ===================== */
+.secretChatBox{
+    position: absolute;
+    visibility: hidden;
+    top: 150px;
+    right: 20px;
+    width: 240px;
+    z-index: 100;
+    height: 500px;
+    padding: 5px 10px 0;
+    border-radius: 15px;
+    backdrop-filter: blur(1px);
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255,255,255, 0.8);
+}
+.secretChatBoxActive{
+    top: 130px;
+    visibility: visible;
+    transition: 0.3s ease;
+}
+.chatTrack{
+    width: 100%;
+    height: 450px;
+    overflow-x: hidden;
+}
+.secretChat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+/* ======================= Message Section ======================= */
+.messengerContainer{
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    width: 270px;
+    z-index: 100;
+    height: 500px;
+    overflow: hidden;
+    visibility: hidden;
+    border-radius: 15px;
+    backdrop-filter: blur(0.5px);
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+.messengerContainerActive{
+    top: 130px;
+    visibility: visible;
+    transition: 0.3s ease;
+}
+.messengerContainerBox{
+    width: 100%;
+    height: 100%;
+}
+.chatUsersContainer{
+    position: absolute;
+    top: 130px;
+    right: 20px;
+    width: 270px;
+    z-index: 100;
+    height: 500px;
+    overflow: hidden;
+    visibility: hidden;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+.chatUsersContainerActive{
+    visibility: visible;
+    backdrop-filter: blur(50px);
+}
+.chatUserIconBtns{
+    padding: 5px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+.chatUserIconBtns i{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.chatUserIconBtns i:hover{
+    background: lightgray;
+}
+.chatHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    padding: 13px 10px 5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+}
+.chatHeader i{
+    color: #000;
+}
+.chatHeader .userName,
+.chatHeader .userID{
+    font-size: 14px;
+}
+.userAvatar{
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 7px;
+    border: 2px solid #fff;
+}
+.chatBackBtn,
+.usersChatBtn{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    background: lightgray;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+.usersChatBtn{
+    left: 10px;
+}
+.smileChatBtn{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+}
+.msgBodyContainer{
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: hidden;
+    height: 335px;
+}
+.msgBodyContainer::-webkit-scrollbar{
+    width: 15px;
+}
+.msgFooter{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+}
+.msgFooter input{
+    width: 80%;
+    height: 25px;
+    resize: none;
+    border: none;
+    padding: 5px;
+    outline: none;
+    background: transparent;
+}
+.chatBox{
+    display: flex;
+    position: relative;
+    margin: auto 0 10px;
+}
+.chatBoxTxt{
+    display: inline-block;
+    margin-left: 5px;
+    max-width: 150px;
+    padding: 3px 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.chatUserImg{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.receiveTime,
+.sentTime{
+    display: inline-block;
+    float: right;
+    font-size: 10px;
+    margin-left: 10px;
+    margin: 20px 5px 0;
+}
+.left{
+    display: flex;
+    justify-content: left;
+}
+.right{
+    display: flex;
+    justify-content: right;
+}
+.secretChatBox > div{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.secretInputAndBtn{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#secretChatTyper{
+    height: 30px;
+    width: 80%;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+#secretChatTyper::placeholder{
+    font-size: 10px;
+}
+.secretInputAndBtn i{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.secretInputAndBtn i:hover{
+    background: lightgray;
+    transition: 0.3s ease;
+}
+/* ===================== Chat Users Section ===================== */
+.chatUserList,
+.chatUserList1{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+}
+.chatUserList:hover,
+.chatUserList1:hover{
+    transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.6);
+}
+.chatUserImage{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+.chatUserList1 .chatUserName{
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*  ==================== Map Section ====================  */
+.mapContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+.mapContainerActive{
+    visibility: visible;
+}
+.mapContainerBox{
+    height: 500px;
+    width: 800px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 2px;
+    position: relative;
+    visibility: hidden;
+    transform: scale(0.8);
+}
+.mapContainerBoxActive{
+    transform: scale(1);
+    transition: 0.3s ease;
+    visibility: visible;
+}
+#mapCloseBtn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* Heart Section */
+.secretCircle3,
+.secretCircle2,
+.secretCircle1{
+    margin-top: -2%;
+    top: 40%;
+    border-radius: 50%;
+}
+.ripple{
+ 
+    width: 410px;
+    height: 410px;
+  
+    border-radius: 100%;
+
+   
+}
+.wave{
+
+    background-color: transparent;
+    border: 6px solid #ffffff00;
+    transform: translate(-50%,-50%);
+    box-shadow: 3px 3px 10px 0 #a5949466, 3px 3px 10px 0 #c4c0c00d inset,-3px -3px 10px 0 rgba(229, 120, 233, 0.237),-6px -6px 10px 0 rgb(255, 255, 255) inset,6px 6px 10px 0 rgba(241, 103, 190, 0.495) inset;
+    filter: blur(16px);
+    
+}
+
+.heartSection{
+    top: 40%;
+}
+.secretCircle3{
+    width: 500px;
+    height: 500px;
+    animation: ripple 4.5s infinite linear;
+    /* border: 3px solid rgba(255,255,255, 0.6); */
+}
+.secretCircle2{
+    width: 400px;
+    height: 400px;
+    animation: ripple 3.5s infinite linear;
+    /* border: 3px solid rgba(255,255,255, 0.6); */
+}
+.secretCircle1{
+    width: 300px;
+    height: 300px;
+    animation: ripple 2.5s infinite linear;
+    /* border: 3px solid rgba(255,255,255, 0.6); */
+}
+@keyframes ripple {
+    0%{
+        transform: translate(-50%,-50%) scale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%,-50%) scale(1.5);
+        opacity: 0;
+    }
+    /* 2%{
+        opacity: 1;
+    } */
+}

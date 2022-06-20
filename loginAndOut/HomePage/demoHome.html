@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9879abd536.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./demoHome.css">
+</head>
+<body>
+    <div class="bigContainer">
+    <!-- ==================== Header Section ==================== -->
+        <header class="header spaceBetween">
+            <div class="headerLeft spaceBetween">
+                <div class="demoLogo">
+                    <img src="https://images.pexels.com/photos/12348118/pexels-photo-12348118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="searchBox spaceBetween">
+                    <input class="searchInput"type="text" placeholder="Search your crush. . .">
+                    <button class="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="searchUserContainer">
+                    <span class="searchBoxCloseBtn">Close</span>
+                </div>
+            </div>
+            <div class="headerMiddle centerPosition">
+                <span>Crushly</span>
+            </div>
+            <div class="headerRight perfectCenter">
+                <div class="headerUserAvatar">
+                    <img id="userAvatarImg" src="" alt="">
+                </div>
+                <h3 class="userName"></h3>
+            </div>
+        </header>
+    <!-- ================= Middle Head Section ================= -->
+        <div class="middleHead spaceBetween">
+            <div class="middleHeadLeft">
+                <i class="fa-solid fa-bars perfectCenter"></i>
+                <i class="fa-solid fa-arrow-left perfectCenter"></i>
+            </div>
+            <div class="middleHeadRight">
+                <div class="chatContainer perfectCenter">
+                    <i class="fa-solid fa-message chatOpenBtn perfectCenter"></i>
+                    <i class="fa-solid fa-ghost secretChatOpenBtn perfectCenter" id="secretChatBtn"></i>
+                </div>
+            </div>
+        </div>
+    <!-- =================== Menu Bar Section =================== -->
+        <div class="menu_bar">  
+            <div class="dropDown">
+                <h4 class="addressCard"><i class="fa-regular fa-address-card"></i><span id="myUserIdIs">ID :<span class="uniqueID"></span></span></h4>
+                <h4 class="editPro"><i class="fa-regular fa-pen-to-square"></i><span>Edit profile</span></h4>
+                <h4 id="crushLink"><i class="fa-solid fa-heart"></i><span>Your crush</span></h4>
+                <h4 class="theme"><i class="fa-solid fa-brush"></i><span>Theme</span></h4>
+                <h4 class="help"><i class="fa-regular fa-circle-question"></i><span>Help</span></h4>
+                <h4 id="signOutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i><button>Sign out</button></h4>
+            </div>
+            <div class="dropDown_editPro">
+                <div class="cover_change">
+                    <p class="save_change">Save</p>
+                </div>
+                <div class="profile_change">
+                    <img id="profileImg" src="" alt=""></div>
+                <div class="name_change about">
+                    <p>Name:</p>
+                    <input id="userNameType" type="text" placeholder="Хэрэглэгчийн нэр" autocomplete="off">
+                </div>
+                <div class="bio_change about">
+                    <p>Bio:</p>
+                    <input id="bioTypeField" type="text" placeholder="Write here your bio">
+                </div>
+                <div class="avatar_change">
+                    <p class="avatarChange">Choose your avatar</p>
+                    <div class="avatar_container">
+                        <div class="avatar_zurag">
+                            <img class="avatarImg" src="https://firebasestorage.googleapis.com/v0/b/fir-crush-b0222.appspot.com/o/images%2F1.png?alt=media&token=601e056c-9cf3-427d-b5d0-3aaccf80f9d1">
+                        </div>
+                        <div class="avatar_zurag">
+                            <img class="avatarImg" src="https://firebasestorage.googleapis.com/v0/b/fir-crush-b0222.appspot.com/o/images%2F2.png?alt=media&token=ca24b9dd-20c4-4b20-b943-b922ea522713" alt="">
+                        </div>
+                        <div class="avatar_zurag">
+                            <img class="avatarImg" src="https://firebasestorage.googleapis.com/v0/b/fir-crush-b0222.appspot.com/o/images%2F3.png?alt=media&token=9103c770-2607-4b67-af74-e7984f5d1e69" alt="">
+                        </div>
+                    </div>
+                    <div class="avatar_container">
+                        <div class="avatar_zurag">
+                            <img class="avatarImg" src="https://firebasestorage.googleapis.com/v0/b/fir-crush-b0222.appspot.com/o/images%2F4.png?alt=media&token=ea5623a6-80d7-428c-a6b8-9bad7853e15e" alt="">
+                        </div>
+                        <div class="avatar_zurag">
+                            <img class="avatarImg" src="https://firebasestorage.googleapis.com/v0/b/fir-crush-b0222.appspot.com/o/images%2F5.png?alt=media&token=8556e8bd-658b-488e-a600-c5b7ec525edc" alt="">
+                        </div>
+                        <div class="avatar_zurag">
+                            <img class="avatarImg" src="https://firebasestorage.googleapis.com/v0/b/fir-crush-b0222.appspot.com/o/images%2F6.jpg?alt=media&token=97db7a54-d85e-4038-b9ec-b2f8db946702" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ==================== End of Menu Section ================== -->
+    <!-- ================= Secret Chat Section ================= -->
+        <div class="secretChatBox">
+            <div>
+                <div class="chatTrack">
+                    <!-- <span class="secretChat">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span> -->
+                </div>
+                <div class="secretInputAndBtn spaceBetween">
+                    <input type="text" id="secretChatTyper" placeholder="Tell your crush about your feeling">
+                    <i class="fa-solid fa-paper-plane sendSecretChatBtn"></i>
+                </div>
+            </div>
+        </div>
+    <!-- ===================== Chat Section ===================== -->
+        <div class="messengerContainer">
+            <div class="messengerContainerBox">
+                <div class="chatHeader">
+                    <i class="fa-solid fa-users usersChatBtn"></i>
+                    <i class="fa-solid fa-arrow-right chatBackBtn"></i>
+                    <div class="userAvatar">
+                        <img id="imgProfile" src="" alt="">
+                    </div>
+                    <p id="userNameCu"></p>
+                </div>
+                <div class="msgBodyContainer"></div>
+                <div class="msgFooter">
+                    <i class="fa-regular fa-face-smile smileChatBtn"></i>
+                    <input name="message" id="textMessage" type="text"  placeholder="Write a message">
+                </div>
+            </div>
+        </div>
+        <div class="chatUsersContainer">
+            <div class="chatUserIconBtns perfectCenter">
+                <i class="fa-solid fa-angle-right perfectCenter"></i>
+                <i class="fa-solid fa-angles-right perfectCenter"></i>
+            </div>
+            <div class="myCrushBox"></div>
+            <div class="iAmTheirCrush">
+            </div>
+        </div>
+    <!-- ===================== Help Section ===================== -->
+        <div class="helpContainer perfectCenter">
+            <label>
+                <div class="heart">
+                    <img id="heartBtn" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Love_Heart_SVG.svg"></img>
+                </div>
+                <input id="messageState" type="checkbox" style="display:none"/>
+            </label>
+            <div class="message">
+                <i class="fa-solid fa-minus perfectCenter" id="helpRemoveBtn"></i>
+                <h1>Ашиглах заавар:</h1>
+                <ol type="1">
+                    <li>Манай вэб сайтыг ашиглах маш энгийн. </li>
+                    <li>Та эхлээд хайх хэсэг дээр очин crush-ийнхаа ID хаягыг бичиж match товчыг дарснаар таны crush list идэвхжинэ.</li>
+                    <li>Хэрвээ таны crush list дотор байгаа хүн таньтай 100 метрийн радиус дотор орж ирвэл таны crush-д дохио ирнэ. Мөн таныг crush шилдаг хүн таньтай ойрхон ирвэл мөн дохио ирнэ. Харин ямар дохио ирэх бол.</li>
+                    <li>Таньд крашаа найрах том боломж өгөх хэсэг бол нэр нь үл мэдэгдэх ghost chat юм. Энэхүү чатанд бичсэн зүйлс нэр нь нууцлагдах учир та юу ч бичиж болно.</li>
+                    <li>Эцэст нь таны краш таныг крашилвал private room буюу зөвхөн та хоёрт зохиулсан хувийн чат үүснэ. Гэхдээ за бараг л үүсэхгүй дээ, заза гэхдээ урмыг нь бодоод амжилт.</li>
+                </ul>
+            </div>
+            <div></div>
+        </div>
+        <div class="themeContainer perfectCenter">
+            <div>
+                <i class="fa-solid fa-minus perfectCenter" id="themeRemoveBtn"></i>
+                <div class="themeBox">
+                    <div class="themeType"></div>
+                    <div class="themeType"></div>
+                </div>
+            </div>
+        </div>
+    <!-- =================== My Crush Section =================== -->
+        <div class="crushList perfectCenter"></div>
+    <!-- =============== End of My Crush Section ================ -->
+        <div class="middleContainer">
+            <div id="crushCounter"></div>
+            <audio id="multiaudio1" src="./assets/smf.mp3" preload="auto"></audio>
+            <div class="ripple">
+                <div class="secretCircle3 perfectCenter centerPosition wave"></div>
+                <div class="secretCircle2 perfectCenter centerPosition wave"></div>
+                <div class="secretCircle1 perfectCenter centerPosition wave"></div>
+            </div>
+            <div class="heartSection centerPosition"><div></div></div>
+            <div class="biosCon perfectCenter"></div>
+            <div class="biosUnderline"></div>
+        </div>
+    </div>
+    <script src="./demoHome.js"></script>
+    <script type="module" src="./demoHomeDatabase.js" ></script>
+    <script src="./demoHomeLocation.js" type="module"></script>
+</body>
+</html>
